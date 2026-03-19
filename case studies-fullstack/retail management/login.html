@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartRetail - Login | Fresh Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo-area">
+                <span class="logo-icon">🛒</span>
+                <span>SmartRetail</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">🏠 Home</a>
+                <a href="products.html">🛍️ Products</a>
+                <a href="cart.html">🛒 Cart <span id="cartCount" class="cart-badge">0</span></a>
+                <a href="about.html">ℹ️ About Us</a>
+                <a href="contact.html">📞 Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline active">Login</button>
+                <button class="btn btn-primary" onclick="window.location.href='signup.html'">Signup</button>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <h2>🔐 Login to SmartRetail</h2>
+                    
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="loginEmail" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" id="loginPassword" class="form-control" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                        <div id="loginMessage" class="alert" style="margin-top: 1rem;"></div>
+                    </form>
+                    
+                    <p style="margin-top: 1rem; text-align: center;">
+                        Don't have an account? 
+                        <a href="signup.html" style="color: var(--secondary);">Sign up here</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📍 Store Address</h4>
+                    <p>123 Market Street<br>New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕒 Store Hours</h4>
+                    <p>Monday - Saturday: 8AM - 9PM<br>Sunday: 9AM - 6PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📞 Contact</h4>
+                    <p>+1 (800) 123-4567<br>support@smartretail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🔗 Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">📘 Facebook</a>
+                        <a href="#">📷 Instagram</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmartRetail - Fresh Groceries Delivered. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

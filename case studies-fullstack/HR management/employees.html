@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRPro - Employees | Human Resource Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo-area">
+                <span class="logo-icon">HR</span>
+                <span>HRPro</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">🏠 Home</a>
+                <a href="employees.html" class="active">👥 Employees</a>
+                <a href="attendance.html">📆 Attendance</a>
+                <a href="payroll.html">💰 Payroll</a>
+                <a href="about.html">ℹ️ About</a>
+                <a href="contact.html">📞 Contact</a>
+            </div>
+            <div class="auth-buttons" id="authButtons">
+                <!-- Dynamic content based on login state -->
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="container">
+            <div class="card">
+                <div class="flex justify-between align-center">
+                    <h2>👥 Employee Directory</h2>
+                    <button class="btn btn-primary" onclick="showAddEmployeeModal()">
+                        ➕ Add Employee
+                    </button>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="searchEmployee" class="search-input" 
+                           placeholder="Search by name or department...">
+                    <select id="filterDepartment" class="filter-select">
+                        <option value="">All Departments</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="HR">HR</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Finance">Finance</option>
+                    </select>
+                    <select id="filterStatus" class="filter-select">
+                        <option value="">All Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                </div>
+                
+                <div class="table-container" id="employeesTableContainer">
+                    <!-- Employee table will be loaded dynamically -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>Department</th>
+                                <th>Role</th>
+                                <th>Contact</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employeeTableBody">
+                            <tr>
+                                <td colspan="7" class="text-center">Loading employees...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Add/Edit Employee Modal -->
+        <div id="employeeModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeEmployeeModal()">&times;</span>
+                <h2 id="modalTitle">Add New Employee</h2>
+                <form id="employeeForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="empName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Employee ID</label>
+                        <input type="text" id="empId" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Department</label>
+                        <select id="empDept" class="form-control" required>
+                            <option value="">Select Department</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="HR">HR</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Role</label>
+                        <input type="text" id="empRole" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" id="empContact" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="empStatus" class="form-control" required>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Employee</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📍 Address</h4>
+                    <p>221B HR Street<br>New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕒 Working Hours</h4>
+                    <p>Monday - Friday<br>9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📧 Contact</h4>
+                    <p>support@hrpro.com<br>📞 +1 (800) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🔗 Social</h4>
+                    <p>🐦 Twitter: @hrpro<br>💼 LinkedIn: /hrpro</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HRPro - Human Resource Management System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

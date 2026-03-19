@@ -1,0 +1,33 @@
+.payment {
+  width: 350px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.payment h2 {
+  text-align: center;
+  color: #d63384;
+}
+
+.order {
+  background: #ffe6f0;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.payment input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  background: #d63384;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,188 @@
+1.//print array
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int[] a=new int[n];
+	    for(int i=0;i<n;i++){
+	        a[i]=sc.nextInt();
+	    }
+	    for(int i=0;i<n;i++){
+	        System.out.print(a[i]+" ");
+	    }
+	}
+}
+
+2.//Min array
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n = sc.nextInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+        int minValue = a[0];
+        int minIndex = 0;
+        for (int i = 1; i < n; i++) {
+            if (a[i] < minValue) {
+                minValue = a[i];
+                minIndex = i;
+            }
+        }
+        System.out.println(minIndex);
+    }
+}
+
+3.//Summation
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n = sc.nextInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            int arr = sc.nextInt();
+            a[i]=arr;
+        }
+        int sum = 0;
+        for(int i=0;i<n;i++){
+        sum+=a[i];
+            }
+        System.out.println(sum);
+    }  }
+
+4.//counting pretty numbers
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T > 0) {
+            int L = sc.nextInt();
+            int R = sc.nextInt();
+            int count = 0;
+            for (int i = L; i <= R; i++) {
+                int lastDigit = i % 10;
+                if (lastDigit == 2 || lastDigit == 3 || lastDigit == 9) {
+                    count++;
+                }
+            }
+            System.out.println(count);
+            T--;
+        }
+    }
+}
+
+5.//Multiply the array
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T>0) {
+            int N = sc.nextInt();
+            long product = 1;   
+            for (int i = 0; i < N; i++) {
+                int value = sc.nextInt();
+                product *= value;
+            }
+            System.out.println(product);
+            T--;
+        }
+    }
+}
+
+6.//solve the case
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T > 0) {
+            int n = sc.nextInt();
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = sc.nextInt();
+            }
+            System.out.print(arr[0]);
+            for (int i = 1; i < n; i++) {
+                if (arr[i] != arr[i - 1]) {
+                    System.out.print(" " + arr[i]);
+                }
+            }
+            System.out.println(); 
+            T--;
+        }
+    }
+}
+
+7.//sum of array elements
+public class SumArray {
+    public static void main(String[] args) {
+        int[] arr = {5, 10, 15, 20};
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        System.out.println("Sum = " + sum);
+    }
+}
+
+8.//frequency of each number
+import java.util.*;
+public class FrequencyCount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int[] arr = new int[N];
+        int[] freq = new int[N + 1];
+        for (int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
+            freq[arr[i]]++;
+        }
+        for (int i = 1; i <= N; i++) {
+            System.out.println(i + ": " + freq[i]);
+        }
+    }
+}
+
+9.//count distinct numbers
+import java.util.*;
+public class CountDistinct {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
+            set.add(arr[i]);
+        }
+
+        System.out.println(set.size());
+    }
+}
+
+10.//sum of odd elements
+import java.util.*;
+public class SumOfOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int[] arr = new int[N];
+        int sum = 0;
+
+        for (int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
+            if (arr[i] % 2 != 0) {
+                sum += arr[i];
+            }
+        }
+        System.out.println(sum);
+    }
+}
