@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce UI</title>
+
+  Tailwind CDN
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="ecommerce.css">
+</head>
+
+<body class="bg-gray-100 ">
+<!-- ================= LOGIN PAGE (VISIBLE FIRST) ================= -->
+<section id="loginPage" class="login-wrapper">
+  <div class="login-box">
+    <h2><strong>LOGIN PAGE</strong></h2>
+    <input id="email" type="text" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">SUBMIT</button>
+  </div>
+</section>
+
+<!-- ================= MAIN APP (HIDDEN INITIALLY) ================= -->
+<div id="app" style="display:none;">
+
+<!-- ================= NAVBAR ================= -->
+  <nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
+  <h1 class="text-xl font-bold">ShopNow</h1>
+  <div class="space-x-4">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('fashion')">Fashion</button>
+    <button onclick="showPage('mobiles')">Mobiles</button>
+    <button onclick="showPage('electronics')">Electronics</button>
+    <button onclick="showPage('tv')">TV</button>
+    <button onclick="showPage('contact')">Contact</button>
+    🛒 <span id="cartCount">0</span>
+  </div>
+</nav>
+<!-- ================= HOME ================= -->
+<section id="home" class="page p-6">
+  <!-- HERO BANNER -->
+  <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-10 rounded-xl mb-8">
+    <h2 class="text-3xl font-bold">Big Billion Sale 🎉</h2>
+    <p class="mt-2">Up to 50% off on Electronics, Fashion & More</p>
+  </div>
+  <!-- CATEGORIES -->
+  <h3 class="text-xl font-semibold mb-4">Shop by Category</h3>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+
+    <div onclick="showPage('fashion')" class="category-card">
+      👕 Fashion
+    </div>
+
+    <div onclick="showPage('mobiles')" class="category-card">
+      📱 Mobiles
+    </div>
+
+    <div onclick="showPage('electronics')" class="category-card">
+      💻 Electronics
+    </div>
+
+    <div onclick="showPage('tv')" class="category-card">
+      📺 TV & Appliances
+    </div>
+
+  </div>
+  <!-- FEATURED PRODUCTS -->
+  <h3 class="text-xl font-semibold mb-4">Featured Products</h3>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+    <div class="card">
+      <img src="men.png" onclick="expandImage(this.src)">
+      <h3>Men Shirt</h3>
+      <p>₹999 <span class="discount">30% OFF</span></p>
+      <button onclick="addToCart(1,'Men Shirt',999)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="mobile3.png" onclick="expandImage(this.src)">
+      <h3>Smart Phone motorla</h3>
+      <p>₹14999 <span class="discount">20% OFF</span></p>
+      <button onclick="addToCart(2,'Smart Phone motorla',14999)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="makeup.png" onclick="expandImage(this.src)">
+      <h3>Products</h3>
+      <p>₹299 <span class="discount">20% OFF</span></p>
+      <button onclick="addToCart(2,'Products',14999)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FASHION ================= -->
+<section id="fashion" class="page hidden p-6">
+  <h2 class="text-2xl font-bold mb-4">Fashion</h2>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="card">
+      <img src="dress1.png" onclick="expandImage(this.src)">
+      <h3>Modern Frock</h3>
+      <p>₹1000</p>
+      <button onclick="addToCart(3,'Modern Frock',1000)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="dress2.png" onclick="expandImage(this.src)">
+      <h3>Beautiful Half Saree</h3>
+      <p>₹1500</p>
+      <button onclick="addToCart(3,'Beautiful Half Saree',1500)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="dress3.png" onclick="expandImage(this.src)">
+      <h3>Trendy Chudidar</h3>
+      <p>₹900</p>
+      <button onclick="addToCart(3,'Trendy Chudidar',900)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="watch.png" onclick="expandImage(this.src)">
+      <h3>Trendy watch</h3>
+      <p>₹2000</p>
+      <button onclick="addToCart(3,'Trendy watch',900)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+<!-- ================= MOBILES ================= -->
+<section id="mobiles" class="page hidden p-6">
+  <h2 class="text-2xl font-bold mb-4">Mobiles</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+    <div class="card">
+      <img src="mobile1.png" onclick="expandImage(this.src)">
+      <h3>Samsung Galaxy</h3>
+      <p>₹18,999 <span class="discount">15% OFF</span></p>
+      <button onclick="addToCart(10,'Samsung Galaxy',18999)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="mobile2.png" onclick="expandImage(this.src)">
+      <h3>iPhone</h3>
+      <p>₹14,499 <span class="discount">20% OFF</span></p>
+      <button onclick="addToCart(11,'iPhone',14499)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="mobile3.png" onclick="expandImage(this.src)">
+      <h3>Motorola G</h3>
+      <p>₹12,999 <span class="discount">10% OFF</span></p>
+      <button onclick="addToCart(12,'Motorola G',12999)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="mobile4.png" onclick="expandImage(this.src)">
+      <h3>One plus</h3>
+      <p>₹8,999 <span class="discount">5% OFF</span></p>
+      <button onclick="addToCart(13,'One plus',39999)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="charger.png" onclick="expandImage(this.src)">
+      <h3>New charger</h3>
+      <p>₹499 <span class="discount">5% OFF</span></p>
+      <button onclick="addToCart(13,'Nwe charger',499)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+<!-- ================= ELECTRONICS ================= -->
+<section id="electronics" class="page hidden p-6">
+  <h2 class="text-2xl font-bold mb-4">Electronics</h2>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="card">
+      <img src="laptop.png" onclick="expandImage(this.src)">
+      <h3>Laptop</h3>
+      <p>₹55999</p>
+      <button onclick="addToCart(4,'Laptop',55999)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="laptop.png" onclick="expandImage(this.src)">
+      <h3>Laptop</h3>
+      <p>₹55999</p>
+      <button onclick="addToCart(4,'Laptop',55999)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="laptop2.png" onclick="expandImage(this.src)">
+      <h3>Laptop New</h3>
+      <p>₹30999</p>
+      <button onclick="addToCart(4,'Laptop2',30999)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="fridge.png" onclick="expandImage(this.src)">
+      <h3>fridge</h3>
+      <p>₹40000</p>
+      <button onclick="addToCart(4,'fridge',40000)">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="washmachine.png" onclick="expandImage(this.src)">
+      <h3>Washing Machine</h3>
+      <p>₹10000=</p>
+      <button onclick="addToCart(4,'Washing Machine',10000)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TV ================= -->
+<section id="tv" class="page hidden p-6">
+<h2 class="text-2xl font-bold mb-4">TV & Appliances</h2>
+  <!-- GRID FOR HORIZONTAL LAYOUT -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- PRODUCT 1 -->
+    <div class="card">
+      <img src="tv.png" onclick="expandImage(this.src)">
+      <h3>Smart TV</h3>
+      <p>₹29,999</p>
+      <button onclick="addToCart(5,'Smart TV',29999)">Add to Cart</button>
+    </div>
+    <!-- PRODUCT 2 -->
+    <div class="card">
+      <img src="tv2.png" onclick="expandImage(this.src)">
+      <h3>Smart Google TV</h3>
+      <p>₹10,499</p>
+      <button onclick="addToCart(5,'Smart Google TV',10499)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="page hidden p-6">
+  <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+  <p>Email: support@shopnow.com</p>
+  <p>Phone: 6304946151</p>
+  <textarea class="border w-full p-2 mt-4" placeholder="Feedback"></textarea>
+</section>
+<!-- IMAGE MODAL -->
+<div id="modal" class="modal hidden">
+  <img id="modalImg">
+  <button onclick="closeModal()">Close</button>
+</div>
+<script src="ecommerce.js"></script>
+</body>
+</html>

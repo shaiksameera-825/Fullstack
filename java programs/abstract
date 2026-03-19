@@ -1,0 +1,98 @@
+import java.util.Scanner;
+
+// Abstract class Media
+abstract class Media {
+    String title;
+    String creator;
+    int duration; // for movies and songs
+    Scanner sc = new Scanner(System.in);
+
+    // Abstract method to print details
+    abstract void printDetails();
+}
+
+// Subclass Book
+class Book extends Media {
+    int pages;
+
+    public void inputDetails() {
+        System.out.println("Entering Book Details...");
+        System.out.print("Enter Book Title: ");
+        title = sc.nextLine();
+        System.out.print("Enter Author Name: ");
+        creator = sc.nextLine();
+        System.out.print("Enter Number of Pages: ");
+        pages = sc.nextInt();
+        sc.nextLine(); // consume newline
+    }
+
+    @Override
+    void printDetails() {
+        System.out.println("Book - Title: " + title + ", Author: " + creator + ", Pages: " + pages);
+    }
+}
+
+// Subclass Movie
+class Movie extends Media {
+
+    public void inputDetails() {
+        System.out.println("Entering Movie Details...");
+        System.out.print("Enter Movie Title: ");
+        title = sc.nextLine();
+        System.out.print("Enter Director Name: ");
+        creator = sc.nextLine();
+        System.out.print("Enter Duration (in minutes): ");
+        duration = sc.nextInt();
+        sc.nextLine(); // consume newline
+    }
+
+    @Override
+    void printDetails() {
+        System.out.println("Movie - Title: " + title + ", Director: " + creator + ", Duration: " + duration + " mins");
+    }
+}
+
+// Subclass Song
+class Song extends Media {
+
+    public void inputDetails() {
+        System.out.println("Entering Song Details...");
+        System.out.print("Enter Song Title: ");
+        title = sc.nextLine();
+        System.out.print("Enter Singer Name: ");
+        creator = sc.nextLine();
+        System.out.print("Enter Duration (in minutes): ");
+        duration = sc.nextInt();
+        sc.nextLine(); // consume newline
+    }
+
+    @Override
+    void printDetails() {
+        System.out.println("Song - Title: " + title + ", Singer: " + creator + ", Duration: " + duration + " mins");
+    }
+}
+
+// Main class to demonstrate dynamic method dispatch
+public class AbstractMediaDemo {
+    public static void main(String[] args) {
+        Media media;
+
+        // Book
+        Book book = new Book();
+        book.inputDetails();
+        media = book; // base class reference
+        media.printDetails();
+
+        // Movie
+        Movie movie = new Movie();
+        movie.inputDetails();
+        media = movie; // base class reference
+        media.printDetails();
+
+        // Song
+        Song song = new Song();
+        song.inputDetails();
+        media = song; // base class reference
+        media.printDetails();
+    }
+}

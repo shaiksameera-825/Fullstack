@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRPro - Payroll | Human Resource Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo-area">
+                <span class="logo-icon">HR</span>
+                <span>HRPro</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">🏠 Home</a>
+                <a href="employees.html">👥 Employees</a>
+                <a href="attendance.html">📆 Attendance</a>
+                <a href="payroll.html" class="active">💰 Payroll</a>
+                <a href="about.html">ℹ️ About</a>
+                <a href="contact.html">📞 Contact</a>
+            </div>
+            <div class="auth-buttons" id="authButtons">
+                <!-- Dynamic content based on login state -->
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="container">
+            <div class="card">
+                <div class="flex justify-between align-center">
+                    <h2>💰 Payroll Management</h2>
+                    <button class="btn btn-primary" onclick="showAddPayrollModal()">
+                        ➕ Add Payroll Record
+                    </button>
+                </div>
+                
+                <div class="table-container" id="payrollTableContainer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Employee ID</th>
+                                <th>Basic Salary</th>
+                                <th>Allowances</th>
+                                <th>Deductions</th>
+                                <th>Net Salary</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="payrollTableBody">
+                            <tr>
+                                <td colspan="7" class="text-center">Loading payroll records...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Add Payroll Modal -->
+        <div id="payrollModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closePayrollModal()">&times;</span>
+                <h2>Add Payroll Record</h2>
+                <form id="payrollForm">
+                    <div class="form-group">
+                        <label>Employee</label>
+                        <select id="payrollEmployee" class="form-control" required>
+                            <option value="">Select Employee</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Basic Salary ($)</label>
+                        <input type="number" id="payrollBasic" class="form-control" min="0" step="1000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Allowances ($)</label>
+                        <input type="number" id="payrollAllowances" class="form-control" min="0" step="100" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Deductions ($)</label>
+                        <input type="number" id="payrollDeductions" class="form-control" min="0" step="100" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Net Salary</label>
+                        <input type="text" id="payrollNet" class="form-control" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Payroll</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Salary Slip Modal -->
+        <div id="slipModal" class="modal">
+            <div class="modal-content" style="max-width: 400px;">
+                <span class="modal-close" onclick="closeSlipModal()">&times;</span>
+                <div id="salarySlipContent"></div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📍 Address</h4>
+                    <p>221B HR Street<br>New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕒 Working Hours</h4>
+                    <p>Monday - Friday<br>9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📧 Contact</h4>
+                    <p>support@hrpro.com<br>📞 +1 (800) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🔗 Social</h4>
+                    <p>🐦 Twitter: @hrpro<br>💼 LinkedIn: /hrpro</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HRPro - Human Resource Management System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

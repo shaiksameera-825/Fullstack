@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartRetail - Home | Fresh Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo-area">
+                <span class="logo-icon">🛒</span>
+                <span>SmartRetail</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">🏠 Home</a>
+                <a href="products.html">🛍️ Products</a>
+                <a href="cart.html">🛒 Cart <span id="cartCount" class="cart-badge">0</span></a>
+                <a href="about.html">ℹ️ About Us</a>
+                <a href="contact.html">📞 Contact</a>
+                <a href="login.html.html">Login</a>
+                <a href="signup.html">Signup</a>
+            </div>
+            <div class="auth-buttons" id="authButtons">
+                <!-- Dynamic content based on login state -->
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="container">
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>Fresh Groceries Delivered to Your Doorstep</h1>
+                    <p>Farm-fresh fruits, vegetables, organic millets & more</p>
+                    <button class="btn btn-primary" onclick="window.location.href='products.html'">Shop Now</button>
+                </div>
+            </div>
+            
+            <!-- Featured Categories -->
+            <section class="featured-section">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card" onclick="window.location.href='products.html?category=Fruits'">
+                        <div class="category-icon">🍎</div>
+                        <h3>Fruits</h3>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='products.html?category=Vegetables'">
+                        <div class="category-icon">🥕</div>
+                        <h3>Vegetables</h3>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='products.html?category=Spices'">
+                        <div class="category-icon">🌶️</div>
+                        <h3>Spices</h3>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='products.html?category=Millets'">
+                        <div class="category-icon">🌾</div>
+                        <h3>Millets</h3>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='products.html?category=Dairy'">
+                        <div class="category-icon">🥛</div>
+                        <h3>Dairy</h3>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='products.html?category=Snacks'">
+                        <div class="category-icon">🍪</div>
+                        <h3>Snacks</h3>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Today's Offers -->
+            <section class="offers-section">
+                <h2>Today's Special Offers</h2>
+                <div class="offers-grid" id="todayOffers">
+                    <!-- Offers will be loaded dynamically -->
+                </div>
+            </section>
+            
+            <!-- Trending Products -->
+            <section class="trending-section">
+                <h2>Trending Products</h2>
+                <div class="products-grid" id="trendingProducts">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📍 Store Address</h4>
+                    <p>123 Market Street<br>New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕒 Store Hours</h4>
+                    <p>Monday - Saturday: 8AM - 9PM<br>Sunday: 9AM - 6PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📞 Contact</h4>
+                    <p>+1 (800) 123-4567<br>support@smartretail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🔗 Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">📘 Facebook</a>
+                        <a href="#">📷 Instagram</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmartRetail - Fresh Groceries Delivered. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

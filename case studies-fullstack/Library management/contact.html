@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyLibrary</title>
+  <link rel="stylesheet" href="library.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">MyLibrary</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="issued.html">Issued Books</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" id="loginLink">Login</a></li>
+      <li><a href="signup.html" id="signupLink">Signup</a></li>
+      <li><button id="logoutBtn" onclick="logout()">Logout</button></li>
+    </ul>
+  </nav>
+  <h2>Contact Us</h2>
+
+  <form onsubmit="submitContact(event)">
+    <input type="text" id="name" placeholder="Your Name"><br><br>
+    <input type="email" id="email" placeholder="Your Email"><br><br>
+    <textarea id="message" placeholder="Your Message"></textarea><br><br>
+    <button type="submit">Send</button>
+  </form>
+
+  <p id="msg"></p>
+  <footer>
+    <p>MyLibrary, Kadapa</p>
+    <p>Mon–Sat: 9 AM – 6 PM</p>
+    <p>Email: support@mylibrary.com</p>
+    <p>© 2026 MyLibrary</p>
+  </footer>
+
+  <script src="library.js"></script>
+</body>
+</html>

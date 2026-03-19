@@ -1,0 +1,94 @@
+1.//Arithmeric exception
+import java.util.Scanner;
+public class ArithmeticExceptionDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter numerator: ");
+            int numerator = sc.nextInt();
+
+            System.out.print("Enter denominator: ");
+            int denominator = sc.nextInt();
+
+            int result = numerator / denominator;
+            System.out.println("Result = " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero is not allowed");
+        }
+
+        System.out.println("Program continues smoothly...");
+    }
+}
+
+2.//Nullpointerexception
+public class NullPointerExceptionDemo {
+    public static void main(String[] args) {
+        String str = null;
+
+        try {
+            System.out.println("Length of the string: " + str.length());
+        } catch (NullPointerException e) {
+            System.out.println("Error: Cannot access methods of a null object");
+        }
+
+        System.out.println("Program continues smoothly...");
+    }
+}
+
+3.//Array index out of bounds exception
+import java.util.Scanner;
+public class ArrayIndexOutOfBoundsExceptionDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] arr = {10, 20, 30};
+
+        try {
+            System.out.print("Enter index to access: ");
+            int index = sc.nextInt();
+
+            System.out.println("Element at index " + index + " is " + arr[index]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Invalid array index accessed");
+        }
+
+        System.out.println("Program continues smoothly...");
+    }
+}
+
+4.//Number format exception
+import java.util.Scanner;
+public class NumberFormatExceptionDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter a number: ");
+            String input = sc.nextLine();
+
+            int number = Integer.parseInt(input);
+            System.out.println("You entered: " + number);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Invalid number format");
+        }
+
+        System.out.println("Program continues smoothly...");
+    }
+}
+
+5.//Class cast exception
+public class ClassCastExceptionDemo {
+    public static void main(String[] args) {
+        Object obj = new Integer(100);
+
+        try {
+            String str = (String) obj; // Invalid cast
+            System.out.println(str);
+        } catch (ClassCastException e) {
+            System.out.println("Error: Invalid type casting attempted");
+        }
+
+        System.out.println("Program continues smoothly...");
+    }
+}

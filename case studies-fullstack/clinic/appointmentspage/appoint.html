@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - MyClinic</title>
+    <link rel="stylesheet" href="appoint.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="/indexpage/index.html">Index</a></li>
+            <li><a href="/home page/home.html">🏠 Home</a></li>
+            <li><a href="/doctorpage/doctor.html">👩‍⚕️ Doctors</a></li>
+            <li><a href="/appointmentspage/appoint.html">Appointments</a></li>
+            <li><a href="/aboutpage/about.html">About</a></li>
+            <li><a href="/contactpage/contact.html">☎️ Contact</a></li>
+            <li><a href="/login/login.html">Login</a></li>
+            <li><a href="/signuppage/sign.html">Signup</a></li>
+        </ul>
+    </nav>
+    <main class="appointment-form">
+        <h1>Book an Appointment</h1>
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Your Phone">
+
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor">
+                <option>Dr. Radha Krishna</option>
+                <option>Dr. Karthik</option>
+                <option>Dr. Krshnaveni</option>
+                <option>Dr. Soumya</option>
+            </select>
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date">
+            <button type="button" onclick="bookAppointment()">Book Now</button>
+        </form>
+    </main>
+    <footer>
+        <p>My Clinic, Kadapa</p>
+        <p>Mon–Sat: 9 AM – 6 PM</p>
+        <p>Email: myclinic@gmail.com</p>
+        <p>© 2026 MyClinic</p>
+    </footer>
+</body>
+<script src="appoint.js"></script>
+</html>

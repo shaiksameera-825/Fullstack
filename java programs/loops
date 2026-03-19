@@ -1,0 +1,161 @@
+1.//Print even numbers from 1 t0 20
+import java.util.*;
+public class EvenNumbers {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 20; i++) {
+            if(i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+2.//Water consumption
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int T=sc.nextInt();
+	    while(T>0){
+	        int N=sc.nextInt();
+	        if(N>=2000){
+	            System.out.println("YES");
+	        }
+	       else{
+	            System.out.println("NO");
+	           
+	       }
+	       T--;
+	        }
+	    }
+	}
+
+3.//print 1 t0 10 numbers
+import java.util.*;
+public class PrintNumbers {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+4.//Chef and stocks
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T > 0) {
+            int N = sc.nextInt();
+            int t = 0;
+            int m = Integer.MAX_VALUE;
+            for (int i = 0; i < N; i++) {
+                int x = sc.nextInt();
+                t += x;
+                m = Math.min(m, x);
+            }
+            System.out.println(t - m);
+            T--;
+        }
+    }
+}
+
+5.//I can use both hands
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int T=sc.nextInt();
+	    while(T>0){
+	        int L=sc.nextInt();
+	        int R=sc.nextInt();
+	        int M=sc.nextInt();
+	        int page=(M+L-1)/L;
+	        int line=M/R;
+	        System.out.println(page+line);
+	       T--;
+	    }
+	    }
+	}
+
+6.//The old saint and the three questions
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while(T>0){
+            int A=0;
+            int B=0;
+        for (int i = 0; i < 3; i++) {
+            A+=sc.nextInt();
+    }
+    for (int i = 0; i < 3; i++) {
+            B+=sc.nextInt();
+    }
+    if (A == B){
+        System.out.println("Pass");
+    }
+    else{
+        System.out.println("Fail");
+    }
+    T--;
+ }
+ }
+}
+
+7.//Reverse a Number
+import java.util.Scanner;
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int reverse = 0;
+        while(n != 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
+        }
+        System.out.println("Reversed Number = " + reverse);
+    }
+}
+
+8.//right angled triangle
+public class StarPattern {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 5; i++) {
+            for(int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+9.//square pattern
+public class SquarePattern {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 5; i++) {
+            for(int j = 1; j <= 5; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+10.//number triangle
+public class NumberTriangle {
+    public static void main(String[] args) {
+        for(int i = 1; i <= 5; i++) {
+            for(int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}

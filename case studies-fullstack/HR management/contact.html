@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRPro - Contact | Human Resource Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo-area">
+                <span class="logo-icon">HR</span>
+                <span>HRPro</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">🏠 Home</a>
+                <a href="employees.html">👥 Employees</a>
+                <a href="attendance.html">📆 Attendance</a>
+                <a href="payroll.html">💰 Payroll</a>
+                <a href="about.html">ℹ️ About</a>
+                <a href="contact.html" class="active">📞 Contact</a>
+            </div>
+            <div class="auth-buttons" id="authButtons">
+                <!-- Dynamic content based on login state -->
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="container">
+            <div class="card" style="max-width: 600px; margin: 0 auto;">
+                <h2>📬 Contact HR Support</h2>
+                <p>Have questions? We're here to help!</p>
+                
+                <form id="contactForm" style="margin-top: 2rem;">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="contactName" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="contactEmail" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="contactMsg" class="form-control" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="contactMessage" class="alert" style="margin-top: 1rem;"></div>
+                </form>
+                
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--gray-300);">
+                    <h3>📍 Office Address</h3>
+                    <p>221B HR Street<br>New York, NY 10001</p>
+                    
+                    <h3>📞 HR Helpline</h3>
+                    <p>+1 (800) 456-7890</p>
+                    
+                    <h3>📧 Email</h3>
+                    <p>support@hrpro.com</p>
+                    
+                    <h3>🕒 Support Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 8:00 PM EST<br>Saturday: 10:00 AM - 4:00 PM EST</p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📍 Address</h4>
+                    <p>221B HR Street<br>New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕒 Working Hours</h4>
+                    <p>Monday - Friday<br>9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📧 Contact</h4>
+                    <p>support@hrpro.com<br>📞 +1 (800) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🔗 Social</h4>
+                    <p>🐦 Twitter: @hrpro<br>💼 LinkedIn: /hrpro</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HRPro - Human Resource Management System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

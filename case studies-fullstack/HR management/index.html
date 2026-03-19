@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRPro - Home | Human Resource Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo-area">
+                <span class="logo-icon">HR</span>
+                <span>HRPro</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">🏠 Home</a>
+                <a href="employees.html">👥 Employees</a>
+                <a href="attendance.html">📆 Attendance</a>
+                <a href="payroll.html">💰 Payroll</a>
+                <a href="about.html">ℹ️ About</a>
+                <a href="contact.html">📞 Contact</a>
+            </div>
+            <div class="auth-buttons" id="authButtons">
+                <!-- Dynamic content based on login state -->
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="container" id="mainContent">
+            <div class="card">
+                <h1>Welcome to HRPro <span id="userName">Guest</span>! 👋</h1>
+                <p class="lead">Your complete Human Resource Management Solution</p>
+            </div>
+            
+            <div class="grid grid-3" id="statsContainer">
+                <!-- Stats will be loaded dynamically -->
+                <div class="stat-card">
+                    <h3>Total Employees</h3>
+                    <div class="stat-value" id="totalEmployees">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Present Today</h3>
+                    <div class="stat-value" id="presentToday">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Monthly Payroll</h3>
+                    <div class="stat-value" id="monthlyPayroll">$0</div>
+                </div>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="card">
+                    <h2>📢 Announcements</h2>
+                    <ul class="announcement-list">
+                        <li>🔔 New health benefits enrollment opens June 1st</li>
+                        <li>🎉 Company picnic - July 15th</li>
+                        <li>📊 Q2 Performance reviews starting next week</li>
+                        <li>💻 New HR portal training session - Friday 2 PM</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h2>⚡ Quick Actions</h2>
+                    <div class="quick-actions">
+                        <button class="btn btn-primary" onclick="window.location.href='employees.html'">
+                            👥 Manage Employees
+                        </button>
+                        <button class="btn btn-primary" onclick="window.location.href='attendance.html'">
+                            📆 Mark Attendance
+                        </button>
+                        <button class="btn btn-primary" onclick="window.location.href='payroll.html'">
+                            💰 View Payroll
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📍 Address</h4>
+                    <p>221B HR Street<br>New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕒 Working Hours</h4>
+                    <p>Monday - Friday<br>9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📧 Contact</h4>
+                    <p>support@hrpro.com<br>📞 +1 (800) 456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🔗 Social</h4>
+                    <p>🐦 Twitter: @hrpro<br>💼 LinkedIn: /hrpro</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HRPro - Human Resource Management System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

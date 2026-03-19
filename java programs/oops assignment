@@ -1,0 +1,127 @@
+1.//class an object
+class Car {
+    String brand;
+    String model;
+    int year;
+    Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota", "Corolla", 2022);
+
+        System.out.println("Brand: " + car.brand);
+        System.out.println("Model: " + car.model);
+        System.out.println("Year: " + car.year);
+    }
+}
+
+2.//Encapsulation
+class BankAccount {
+    private String accountNumber;
+    private int balance;
+    public BankAccount(String accountNumber, int balance) {
+        this.accountNumber = accountNumber;
+        if (balance >= 0)
+            this.balance = balance;
+    }
+    public tring getAccountNumber() {
+        return accountNumber;
+    }
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        if (balance >= 0)
+            this.balance = balance;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount("123456789", 5000);
+        System.out.println("Account Number: " + acc.getAccountNumber());
+        System.out.println("Balance: " + acc.getBalance());
+    }
+}
+
+3.//Inheritance
+class Animal {
+    void makeSound() {
+        System.out.println("Some sound");
+    }
+}
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.makeSound();
+    }
+}
+
+4.//polymorphism
+class Shape {
+    double area() {
+        return 0;
+    }
+}
+class Circle extends Shape {
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+    double area() {
+        return 3.14 * radius * radius;
+    }
+}
+class Rectangle extends Shape {
+    double length, width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+    double area() {
+        return length * width;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle(5);
+        Rectangle r = new Rectangle(4, 6);
+
+        System.out.println("Area of Circle: " + c.area());
+        System.out.println("Area of Rectangle: " + r.area());
+    }
+}
+
+5.//Abstraction
+abstract class Vehicle {
+    abstract void start();
+}
+class Car extends Vehicle {
+    void start() {
+        System.out.println("Car is starting...");
+    }
+}
+class Bike extends Vehicle {
+    void start() {
+        System.out.println("Bike is starting...");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Vehicle car = new Car();
+        Vehicle bike = new Bike();
+        car.start();
+        bike.start();
+    }
+}

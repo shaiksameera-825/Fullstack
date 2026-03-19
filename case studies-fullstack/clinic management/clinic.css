@@ -1,0 +1,94 @@
+/* basic page setup */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* navbar */
+.navbar {
+  background-color: #0a5c75;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: white;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* page headings */
+h1, h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* form box */
+form, .form-box {
+  width: 300px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* inputs */
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+/* buttons */
+button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 15px;
+  background-color: #0a5c75;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #084a5f;
+}
+
+/* messages */
+p {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(57, 178, 189);
+}
+
+/* doctor cards / simple sections */
+section {
+  background-color: white;
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+/* footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}

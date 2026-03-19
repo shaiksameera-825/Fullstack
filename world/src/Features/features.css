@@ -1,0 +1,43 @@
+.fs-container {
+  min-height: 100vh;
+  background: #d0f9b1;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fs-container h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.fs-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.fs-card {
+  background: #f19cef;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.fs-card:hover {
+  transform: translateY(-8px);
+}
+
+.fs-card h3 {
+  color: #ee0f68;
+  margin-bottom: 10px;
+}
+
+.fs-card p {
+  color: #030303;
+  font-size: 14px;
+}

@@ -1,0 +1,107 @@
+// Interface definition
+interface RemoteControl {
+    void powerOn();
+    void powerOff();
+    void increaseVolume();
+    void decreaseVolume();
+}
+
+// TV class implementing RemoteControl
+class TV implements RemoteControl {
+    @Override
+    public void powerOn() {
+        System.out.println("TV is now ON.");
+    }
+
+    @Override
+    public void powerOff() {
+        System.out.println("TV is now OFF.");
+    }
+
+    @Override
+    public void increaseVolume() {
+        System.out.println("TV volume increased.");
+    }
+
+    @Override
+    public void decreaseVolume() {
+        System.out.println("TV volume decreased.");
+    }
+}
+
+// AC class implementing RemoteControl
+class AC implements RemoteControl {
+    @Override
+    public void powerOn() {
+        System.out.println("AC is now ON.");
+    }
+
+    @Override
+    public void powerOff() {
+        System.out.println("AC is now OFF.");
+    }
+
+    @Override
+    public void increaseVolume() {
+        System.out.println("AC cooling increased.");
+    }
+
+    @Override
+    public void decreaseVolume() {
+        System.out.println("AC cooling decreased.");
+    }
+}
+
+// Speaker class implementing RemoteControl
+class Speaker implements RemoteControl {
+    @Override
+    public void powerOn() {
+        System.out.println("Speaker is now ON.");
+    }
+
+    @Override
+    public void powerOff() {
+        System.out.println("Speaker is now OFF.");
+    }
+
+    @Override
+    public void increaseVolume() {
+        System.out.println("Speaker volume increased.");
+    }
+
+    @Override
+    public void decreaseVolume() {
+        System.out.println("Speaker volume decreased.");
+    }
+}
+
+// Main class to demonstrate interface usage
+public class SmartDeviceDemo {
+    public static void main(String[] args) {
+        RemoteControl device;
+
+        // TV
+        System.out.println("=== TV Control ===");
+        device = new TV();
+        device.powerOn();
+        device.increaseVolume();
+        device.decreaseVolume();
+        device.powerOff();
+
+        // AC
+        System.out.println("=== AC Control ===");
+        device = new AC();
+        device.powerOn();
+        device.increaseVolume();
+        device.decreaseVolume();
+        device.powerOff();
+
+        // Speaker
+        System.out.println("=== Speaker Control ===");
+        device = new Speaker();
+        device.powerOn();
+        device.increaseVolume();
+        device.decreaseVolume();
+        device.powerOff();
+    }
+}

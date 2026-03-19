@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartRetail - Products | Fresh Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo-area">
+                <span class="logo-icon">🛒</span>
+                <span>SmartRetail</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">🏠 Home</a>
+                <a href="products.html" class="active">🛍️ Products</a>
+                <a href="cart.html">🛒 Cart <span id="cartCount" class="cart-badge">0</span></a>
+                <a href="about.html">ℹ️ About Us</a>
+                <a href="contact.html">📞 Contact</a>
+            </div>
+            <div class="auth-buttons" id="authButtons">
+                <!-- Dynamic content based on login state -->
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="container">
+            <div class="products-header">
+                <h1>Our Products</h1>
+                <p>Fresh, organic, and high-quality groceries</p>
+            </div>
+            
+            <!-- Filters and Search -->
+            <div class="filters-section">
+                <div class="search-bar">
+                    <input type="text" id="searchProduct" class="search-input" 
+                           placeholder="🔍 Search products...">
+                </div>
+                
+                <div class="filter-options">
+                    <select id="filterCategory" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Spices">Spices</option>
+                        <option value="Millets">Millets</option>
+                        <option value="Dairy">Dairy</option>
+                        <option value="Snacks">Snacks</option>
+                    </select>
+                    
+                    <select id="filterPrice" class="filter-select">
+                        <option value="">Price Range</option>
+                        <option value="0-10">Under $10</option>
+                        <option value="10-25">$10 - $25</option>
+                        <option value="25-50">$25 - $50</option>
+                        <option value="50+">$50+</option>
+                    </select>
+                    
+                    <select id="sortBy" class="filter-select">
+                        <option value="name">Sort by: Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsContainer">
+                <!-- Products will be loaded dynamically -->
+                <div class="loading-spinner">Loading products...</div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>📍 Store Address</h4>
+                    <p>123 Market Street<br>New York, NY 10001</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕒 Store Hours</h4>
+                    <p>Monday - Saturday: 8AM - 9PM<br>Sunday: 9AM - 6PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📞 Contact</h4>
+                    <p>+1 (800) 123-4567<br>support@smartretail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🔗 Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">📘 Facebook</a>
+                        <a href="#">📷 Instagram</a>
+                        <a href="#">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SmartRetail - Fresh Groceries Delivered. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
